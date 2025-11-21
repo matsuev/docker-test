@@ -1,4 +1,4 @@
-FROM 3.9.25-alpine3.22
+FROM python:3.9-alpine
 
 WORKDIR /app
 
@@ -6,6 +6,6 @@ COPY ./flask .
 
 RUN pip3 install -r requirements.txt
 
-#EXPOSE  (порт)
+EXPOSE  5000
 
 CMD ["python3", "/app.py"]
